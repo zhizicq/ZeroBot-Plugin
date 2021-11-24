@@ -122,12 +122,12 @@ func main() {
 		})
 	zero.RunAndBlock(
 		zero.Config{
-			NickName:      []string{"椛椛", "ATRI", "atri", "亚托莉", "アトリ"},
+			NickName:      []string{"zhizi", "ZHIZI", "栀子", "智子"},
 			CommandPrefix: "/",
 			// SuperUsers 某些功能需要主人权限，可通过以下两种方式修改
 			// "12345678", "87654321"：通过代码写死的方式添加主人账号
 			// flag.Args()：通过命令行参数的方式添加主人账号，无需修改下方任何代码
-			SuperUsers: append([]string{"12345678", "87654321"}, flag.Args()...),
+			SuperUsers: append([]string{"525040433"}, flag.Args()...),
 			Driver:     []zero.Driver{driver.NewWebSocketClient(*url, *token)},
 		},
 	)
