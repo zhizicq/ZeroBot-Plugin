@@ -112,7 +112,7 @@ func init() { // 插件主体
 			"- 删除[涩图/二次元/风景/车万][P站图片ID]\n" +
 			"- >setu status",
 	})
-	engine.OnRegex(`^(来点|来份)(.*)$`, firstValueInList(pool.List)).SetBlock(true).SetPriority(20).
+	engine.OnRegex(`^((来点)|(来份))(.*)$`, firstValueInList(pool.List)).SetBlock(true).SetPriority(20).
 		Handle(func(ctx *zero.Ctx) {
 			if !limit.Load(ctx.Event.UserID).Acquire() {
 				ctx.SendChain(message.Text("请稍后重试0x0..."))
