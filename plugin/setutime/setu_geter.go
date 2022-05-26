@@ -8,7 +8,6 @@ import (
 	"sync"
 	"time"
 	"flag"
-	"fmt"
 	"net/http"
 
 	"github.com/koffeinsource/go-imgur"
@@ -54,14 +53,8 @@ var pool = &imgpool{
 }
 func upload(){
 	imgurClientID := "c7410c26c70bb1d"
-	url := flag.String("url", "", "Gets information based on the URL passed.")
 	upload := "1.jpg"
-	image := flag.String("image", "", "The image ID to be queried.")
-	album := flag.String("album", "", "The album ID to be queried.")
-	gimage := flag.String("gimage", "", "The gallery image ID to be queried.")
-	galbum := flag.String("galbum", "", "The gallery album ID to be queried.")
-	rate := flag.Bool("rate", false, "Get the current rate limit.")
-	flag.Parse()
+
 
 
 
