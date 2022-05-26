@@ -7,7 +7,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"flag"
 	"net/http"
 
 	"github.com/koffeinsource/go-imgur"
