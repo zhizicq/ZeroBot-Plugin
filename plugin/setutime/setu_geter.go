@@ -68,10 +68,10 @@ func upload(){
 	client := new(imgur.Client)
 	client.HTTPClient = new(http.Client)
 	client.Log = new(klogger.CLILogger)
-	client.ImgurClientID = *imgurClientID
+	client.ImgurClientID = imgurClientID
 
 	if *upload != "" {
-		_, st, err := client.UploadImageFromFile(*upload, "", "test title", "test desc")
+		_, st, err := client.UploadImageFromFile(upload, "", "test title", "test desc")
 		if st != 200 || err != nil {
 			fmt.Printf("Status: %v\n", st)
 			fmt.Printf("Err: %v\n", err)
