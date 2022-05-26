@@ -53,9 +53,9 @@ var pool = &imgpool{
 	pool: make(map[string][]*message.MessageSegment),
 }
 func upload(){
-	imgurClientID := flag.String("id", "", "Your imgur client id. REQUIRED!")
+	imgurClientID := c7410c26c70bb1d
 	url := flag.String("url", "", "Gets information based on the URL passed.")
-	upload := flag.String("upload", "", "Filepath to an image that will be uploaded to imgur.")
+	upload := 1.jpg
 	image := flag.String("image", "", "The image ID to be queried.")
 	album := flag.String("album", "", "The album ID to be queried.")
 	gimage := flag.String("gimage", "", "The gallery image ID to be queried.")
@@ -113,6 +113,7 @@ func init() { // 插件主体
 
 	engine.OnRegex(`^来份(.+)$`, getdb, ctxext.FirstValueInList(pool)).SetBlock(true).Limit(ctxext.LimitByUser).
 		Handle(func(ctx *zero.Ctx) {
+			upload()
 			var imgtype = ctx.State["regex_matched"].([]string)[1]
 			// 补充池子
 			go pool.fill(ctx, imgtype)
