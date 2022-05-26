@@ -70,13 +70,12 @@ func upload(){
 	client.Log = new(klogger.CLILogger)
 	client.ImgurClientID = imgurClientID
 
-	if *upload != "" {
-		_, st, err := client.UploadImageFromFile(upload, "", "test title", "test desc")
-		if st != 200 || err != nil {
-			fmt.Printf("Status: %v\n", st)
-			fmt.Printf("Err: %v\n", err)
-		}
-	}	
+	_, st, err := client.UploadImageFromFile(upload, "", "test title", "test desc")
+	if st != 200 || err != nil {
+		fmt.Printf("Status: %v\n", st)
+		fmt.Printf("Err: %v\n", err)
+	}
+	
 }
 func init() { // 插件主体
 	engine := control.Register("setutime", &control.Options{
