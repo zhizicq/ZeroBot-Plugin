@@ -28,6 +28,8 @@ require (
 	github.com/wcharczuk/go-chart/v2 v2.1.0
 	github.com/wdvxdr1123/ZeroBot v1.5.2-0.20220509035736-f3ad8fa960d7
 	golang.org/x/image v0.0.0-20220413100746-70e8d0d3baa9
+	golang.org/x/text v0.3.7
+	google.golang.org/api v0.65.0
 )
 
 require (
