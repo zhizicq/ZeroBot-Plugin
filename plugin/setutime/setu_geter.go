@@ -53,9 +53,9 @@ var pool = &imgpool{
 	pool: make(map[string][]*message.MessageSegment),
 }
 func upload(){
-	imgurClientID := c7410c26c70bb1d
+	imgurClientID := "c7410c26c70bb1d"
 	url := flag.String("url", "", "Gets information based on the URL passed.")
-	upload := 1.jpg
+	upload := "1.jpg"
 	image := flag.String("image", "", "The image ID to be queried.")
 	album := flag.String("album", "", "The album ID to be queried.")
 	gimage := flag.String("gimage", "", "The gallery image ID to be queried.")
