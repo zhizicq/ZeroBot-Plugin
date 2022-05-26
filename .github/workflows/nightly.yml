@@ -3,7 +3,6 @@ name: 最新版
 on: [push, pull_request]
 
 env:
-  GO111MODULE: "auto"
   BINARY_PREFIX: "zbp_"
   BINARY_SUFFIX: ""
   PR_PROMPT: "::warning:: Build artifact will not be uploaded due to the workflow is trigged by pull request."
