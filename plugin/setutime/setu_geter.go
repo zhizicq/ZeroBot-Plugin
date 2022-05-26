@@ -63,11 +63,7 @@ func upload(){
 	rate := flag.Bool("rate", false, "Get the current rate limit.")
 	flag.Parse()
 
-	// Check if there is anything todo
-	if flag.NFlag() >= 3 || *imgurClientID == "" {
-		flag.PrintDefaults()
-		return
-	}
+
 
 	client := new(imgur.Client)
 	client.HTTPClient = new(http.Client)
